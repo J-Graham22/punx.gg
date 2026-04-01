@@ -3,6 +3,7 @@
 	import GitHubProject from './GitHubProject.svelte';
 
 	interface Props {
+		// repos: GitHubRepoWithReadme[];
 		repos: GitHubRepoWithReadme[];
 		showReadme?: boolean;
 		columns?: 1 | 2;

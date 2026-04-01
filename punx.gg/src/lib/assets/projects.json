@@ -1,0 +1,14 @@
+{
+    "projects": [
+        {
+            "title": "Pepere's Bread",
+            "tags": [
+                {
+                    "name": "Godot",
+                    "color": "blue"
+                }
+            ],
+            "WIP": false
+        }
+    ]
+}

@@ -1,9 +1,17 @@
 <script lang="ts">
 	import WorkInfo from '$lib/components/WorkInfo.svelte';
 	import ProjectInfo from '$lib/components/ProjectInfo.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
+	import GitHubProjectList from '$lib/components/GitHubProjectList.svelte';
+	import { GitHubService } from '$lib/services/github';
+
+	let gh: GitHubService = new GitHubService();
+	
+	let reposPromise = gh.getReposWithReadme([{ owner: 'J-Graham22', repo: 'Pepere-s-Bread' }]);
 </script>
 
 <div class="bg-sky-950">
+	<Navbar/>
 	<div class="max-w-6xl mx-auto px-6 py-12">
 		<h1 class="text-4xl font-bold tracking-tight mb-8">
 			PUNX <span class="text-white/60">[dot]</span> my
@@ -56,6 +64,12 @@
 				/>
 			</div>
 
+			<!-- <h1>ASDFASDFASDFASDF</h1>
+			{#await reposPromise then repoList }
+				<GitHubProjectList 
+					repos={repoList}
+				/>
+			{/await} -->
 			<!-- Right Column: Projects -->
 			<div class="projects space-y-6">
 				<h2 class="text-xl font-semibold tracking-wide text-white/80">projects</h2>
@@ -64,6 +78,10 @@
 				<ProjectInfo />
 				<ProjectInfo />
 				<ProjectInfo />
+			</div>
+
+			<!-- Right Column: Projects -->
+			<div class="projects space-y-6">
 			</div>
 		</div>
 	</div>
