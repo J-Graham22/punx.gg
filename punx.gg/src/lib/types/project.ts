@@ -1,6 +1,6 @@
 export interface Tag {
     name: string,
-    color: number
+    color: string //represent as hex 
 }
 
 export interface Project {
