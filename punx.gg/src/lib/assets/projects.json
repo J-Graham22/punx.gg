@@ -9,6 +9,30 @@
                 }
             ],
             "WIP": false
+        },
+        {
+            "title": "Necrobution",
+            "tags": [
+                {
+                    "name": "Zig",
+                    "color": "orange"
+                },
+                {
+                    "name": "Raylib",
+                    "color": "gray"
+                }
+            ],
+            "WIP": true 
+        },
+        {
+            "title": "KKBudget",
+            "tags": [
+                {
+                    "name": "Godot",
+                    "color": "blue"
+                }
+            ],
+            "WIP": true 
         }
     ]
 }
